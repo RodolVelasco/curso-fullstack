@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class DefaultController extends Controller
 {
@@ -31,6 +32,7 @@ class DefaultController extends Controller
             
             $email = (isset($params->email)) ? $params->email : null;
             $password = (isset($params->password)) ? $params->password : null;
+            $getHash = (isset($params->getHash)) ? $params->getHash : null;
             
             $emailConstraint = new Assert\Email();
             $emailConstraint->message = "This email is not valid.";
@@ -39,14 +41,21 @@ class DefaultController extends Controller
             
             if(count($validate_email) == 0 && $password != null)
             {
-                $signup = $jwt_auth->signup($email, $password);
-                return $helpers->json($signup);
+                if($getHash == NULL)
+                {
+                    $signup = $jwt_auth->signup($email, $password);
+                    //$signup = $jwt_auth->signup($email, $password, "hash");
+                }else{
+                    $signup = $jwt_auth->signup($email, $password, true);
+                }
+                
+                //codifica un objeto php a json
+                return new JsonResponse($signup);
             }else{
-                echo "Data incorrect.";
+                return $helpers->json(array("status"=>"error","data"=>"Login not valid."));
             }
         }else{
-            echo "echo with post";
-            die();
+           return $helpers->json(array("status"=>"error","data"=>"Send json with post."));
         }
         
         die();
