@@ -65,11 +65,21 @@ class DefaultController extends Controller
     {
         $helpers = $this->get("app.helpers");
         
+        $hash = $request->get("authorization", null);
+        $check = $helpers->authCheck($hash);
+        //$check = $jwt_auth->checkToken($hash);
+        
+        var_dump($check);
+        die();
+        /*
         $em = $this->getDoctrine()->getManager();
         $users = $em->getRepository('BackendBundle:User')->findAll();
+        */
         //$users = array("id"=>1,"nombre"=>"marduk");
-        return $helpers->json($users);
+        //return $helpers->json($users);
         //dump($users);
         //die();
     }
+    
+
 }

@@ -36,3 +36,12 @@
 [24-Sep-2016 01:17:32 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
 [24-Sep-2016 01:17:32 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
 [24-Sep-2016 01:17:32 UTC] PHP   6. AppBundle\Controller\DefaultController->loginAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[24-Sep-2016 05:39:34 UTC] PHP Fatal error:  Call to a member function checkToken() on a non-object in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Services/Helpers.php on line 33
+[24-Sep-2016 05:39:34 UTC] PHP Stack trace:
+[24-Sep-2016 05:39:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[24-Sep-2016 05:39:34 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[24-Sep-2016 05:39:34 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[24-Sep-2016 05:39:34 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[24-Sep-2016 05:39:34 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[24-Sep-2016 05:39:34 UTC] PHP   6. AppBundle\Controller\DefaultController->pruebasAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[24-Sep-2016 05:39:34 UTC] PHP   7. AppBundle\Services\Helpers->authCheck() /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/DefaultController.php:69
