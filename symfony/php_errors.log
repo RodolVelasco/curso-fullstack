@@ -45,3 +45,19 @@
 [24-Sep-2016 05:39:34 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
 [24-Sep-2016 05:39:34 UTC] PHP   6. AppBundle\Controller\DefaultController->pruebasAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
 [24-Sep-2016 05:39:34 UTC] PHP   7. AppBundle\Services\Helpers->authCheck() /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/DefaultController.php:69
+[26-Sep-2016 16:47:33 UTC] PHP Fatal error:  Class 'Backend\Entity\User' not found in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/UserController.php on line 41
+[26-Sep-2016 16:47:33 UTC] PHP Stack trace:
+[26-Sep-2016 16:47:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[26-Sep-2016 16:47:33 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[26-Sep-2016 16:47:33 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[26-Sep-2016 16:47:33 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[26-Sep-2016 16:47:33 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[26-Sep-2016 16:47:33 UTC] PHP   6. AppBundle\Controller\UserController->newAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[26-Sep-2016 16:51:41 UTC] PHP Fatal error:  Class 'Backend\Entity\User' not found in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/UserController.php on line 41
+[26-Sep-2016 16:51:41 UTC] PHP Stack trace:
+[26-Sep-2016 16:51:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[26-Sep-2016 16:51:41 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[26-Sep-2016 16:51:41 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[26-Sep-2016 16:51:41 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[26-Sep-2016 16:51:41 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[26-Sep-2016 16:51:41 UTC] PHP   6. AppBundle\Controller\UserController->newAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148

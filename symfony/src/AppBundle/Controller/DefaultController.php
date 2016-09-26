@@ -69,7 +69,9 @@ class DefaultController extends Controller
         $check = $helpers->authCheck($hash);
         //$check = $jwt_auth->checkToken($hash);
         
-        var_dump($check);
+        
+        $test = ctype_alpha("HOLA");
+        var_dump($test);
         die();
         /*
         $em = $this->getDoctrine()->getManager();
