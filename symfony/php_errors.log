@@ -61,3 +61,16 @@
 [26-Sep-2016 16:51:41 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
 [26-Sep-2016 16:51:41 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
 [26-Sep-2016 16:51:41 UTC] PHP   6. AppBundle\Controller\UserController->newAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[26-Sep-2016 21:34:00 UTC] PHP Parse error:  syntax error, unexpected '$user' (T_VARIABLE) in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/UserController.php on line 59
+[26-Sep-2016 21:34:00 UTC] PHP Stack trace:
+[26-Sep-2016 21:34:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[26-Sep-2016 21:34:00 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[26-Sep-2016 21:34:00 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[26-Sep-2016 21:34:00 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[26-Sep-2016 21:34:00 UTC] PHP   5. Symfony\Component\HttpKernel\Controller\TraceableControllerResolver->getController() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:131
+[26-Sep-2016 21:34:00 UTC] PHP   6. Symfony\Component\HttpKernel\Controller\ControllerResolver->getController() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Controller/TraceableControllerResolver.php:58
+[26-Sep-2016 21:34:00 UTC] PHP   7. Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver->createController() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2423
+[26-Sep-2016 21:34:00 UTC] PHP   8. Symfony\Component\HttpKernel\Controller\ControllerResolver->createController() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2980
+[26-Sep-2016 21:34:00 UTC] PHP   9. class_exists() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2477
+[26-Sep-2016 21:34:00 UTC] PHP  10. spl_autoload_call() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2477
+[26-Sep-2016 21:34:00 UTC] PHP  11. Symfony\Component\Debug\DebugClassLoader->loadClass() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2477

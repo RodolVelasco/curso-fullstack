@@ -39,14 +39,17 @@ class DefaultController extends Controller
             
             $validate_email = $this->get("validator")->validate($email, $emailConstraint);
             
+            //cifrar password
+            $pwd = hash('sha256', $password);
+            
             if(count($validate_email) == 0 && $password != null)
             {
                 if($getHash == NULL)
                 {
-                    $signup = $jwt_auth->signup($email, $password);
+                    $signup = $jwt_auth->signup($email, $pwd);
                     //$signup = $jwt_auth->signup($email, $password, "hash");
                 }else{
-                    $signup = $jwt_auth->signup($email, $password, true);
+                    $signup = $jwt_auth->signup($email, $pwd, true);
                 }
                 
                 //codifica un objeto php a json
