@@ -211,43 +211,8 @@ class UserController extends Controller
             if(!empty($file) && $file != null)
             {
                 $ext = $file->guessExtension();
-                
-                if($ext == "jpeg" || $ext == "jpg" || $ext == "png" || $ext == "gif")
-                {
-                    $file_name = time() . "." . $ext;
-                    $file->move("uploads/users", $file_name);
-                    
-                    $user->setImage($file_name);
-                    $em->persist($user);
-                    $em->flush();
-                    
-                    $data = array(
-                                "status"    =>  "success",
-                                "code"      =>  200,
-                                "msg"       =>  "Image for user uploaded success"
-                            );
-                }else{
-                    $data = array(
-                                "status"    =>  "error",
-                                "code"      =>  400,
-                                "msg"       =>  "File not valid"
-                            );
-                }
-            }else{
-                $data = array(
-                            "status"    =>  "error",
-                            "code"      =>  400,
-                            "msg"       =>  "Image not uploaded"
-                        );
             }
-        }else{
-            $data = array(
-                        "status"    =>  "error",
-                        "code"      =>  400,
-                        "msg"       =>  "Authorization not valid"
-                    );
-        }
-        
-        return $helpers->json($data);
+                    
+        }// fin if authCheck
     }
 }
