@@ -32,3 +32,9 @@ video_detail:
     path:       /detail/{id}
     defaults:   { _controller: "AppBundle:Video:video"}
     methods:    POST
+    
+video_search:
+    path:       /search/{search}
+    defaults:   { _controller: "AppBundle:Video:search", search:null}
+    methods:    POST
+    

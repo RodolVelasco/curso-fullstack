@@ -346,4 +346,41 @@ class VideoController extends Controller
         
         return $helpers->json($data);
     }
+    
+    public function searchAction(Request $request, $search = null)
+    {
+        $helpers = $this->get("app.helpers");
+        
+        $em = $this->getDoctrine()->getManager();
+        
+        if($search != null)
+        {
+            $dql = "SELECT v FROM BackendBundle:Video v "
+                   ."WHERE v.title LIKE '%$search%' OR " 
+                   ."v.description LIKE '%$search%' ORDER BY v.id DESC";
+        }else{
+            $dql = "SELECT v FROM BackendBundle:Video v ORDER BY v.id DESC";
+        }
+        
+        
+        $query = $em->createQuery($dql);
+        
+        $page = $request->query->getInt("page", 1);
+        $paginator = $this->get("knp_paginator");
+        $items_per_page = 10;
+        
+        $pagination = $paginator->paginate($query, $page, $items_per_page);
+        $total_items_count = $pagination->getTotalItemCount();
+        
+        $data = array(
+                    "status"            => "success",
+                    "total_items_count" => $total_items_count,
+                    "page_actual"       => $page,
+                    "items_per_page"    => $items_per_page,
+                    "total_pages"       => ceil($total_items_count / $items_per_page),
+                    "data"              => $pagination
+                );
+        
+        return $helpers->json($data);
+    }
 }
