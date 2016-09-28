@@ -71,7 +71,7 @@ swiftmailer:
 # KnpPaginatorBundle Configuration
 knp_paginator:
     page_range: 5
-    defaults_options:
+    default_options:
         page_name:  page
         sort_field_name:  sort
         sort_direction_name:  direction
