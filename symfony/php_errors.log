@@ -74,3 +74,133 @@
 [26-Sep-2016 21:34:00 UTC] PHP   9. class_exists() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2477
 [26-Sep-2016 21:34:00 UTC] PHP  10. spl_autoload_call() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2477
 [26-Sep-2016 21:34:00 UTC] PHP  11. Symfony\Component\Debug\DebugClassLoader->loadClass() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2477
+[28-Sep-2016 16:44:09 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/VideoController.php on line 134
+[28-Sep-2016 16:44:09 UTC] PHP Stack trace:
+[28-Sep-2016 16:44:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[28-Sep-2016 16:44:09 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[28-Sep-2016 16:44:09 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[28-Sep-2016 16:44:09 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[28-Sep-2016 16:44:09 UTC] PHP   5. Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:124
+[28-Sep-2016 16:44:09 UTC] PHP   6. Symfony\Component\EventDispatcher\EventDispatcher->dispatch() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php:136
+[28-Sep-2016 16:44:09 UTC] PHP   7. Symfony\Component\EventDispatcher\EventDispatcher->doDispatch() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2058
+[28-Sep-2016 16:44:09 UTC] PHP   8. call_user_func:{/home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2143}() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2143
+[28-Sep-2016 16:44:09 UTC] PHP   9. Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2143
+[28-Sep-2016 16:44:09 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:61}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:61
+[28-Sep-2016 16:44:09 UTC] PHP  11. Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:61
+[28-Sep-2016 16:44:09 UTC] PHP  12. Symfony\Component\Routing\Router->matchRequest() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2340
+[28-Sep-2016 16:44:09 UTC] PHP  13. Symfony\Component\Routing\Router->getMatcher() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:1608
+[28-Sep-2016 16:44:09 UTC] PHP  14. Symfony\Component\Config\ResourceCheckerConfigCacheFactory->cache() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:1640
+[28-Sep-2016 16:44:09 UTC] PHP  15. call_user_func:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/ResourceCheckerConfigCacheFactory.php:46}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/ResourceCheckerConfigCacheFactory.php:46
+[28-Sep-2016 16:44:09 UTC] PHP  16. Symfony\Component\Routing\Router->Symfony\Component\Routing\{closure}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/ResourceCheckerConfigCacheFactory.php:46
+[28-Sep-2016 16:44:09 UTC] PHP  17. Symfony\Component\Routing\Router->getMatcherDumperInstance() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:1630
+[28-Sep-2016 16:44:09 UTC] PHP  18. Symfony\Bundle\FrameworkBundle\Routing\Router->getRouteCollection() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:1678
+[28-Sep-2016 16:44:09 UTC] PHP  19. Symfony\Bundle\FrameworkBundle\Routing\DelegatingLoader->load() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:1897
+[28-Sep-2016 16:44:09 UTC] PHP  20. Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser->parse() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Routing/DelegatingLoader.php:80
+[28-Sep-2016 16:44:09 UTC] PHP  21. class_exists() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2901
+[28-Sep-2016 16:44:09 UTC] PHP  22. spl_autoload_call() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2901
+[28-Sep-2016 16:44:09 UTC] PHP  23. Symfony\Component\Debug\DebugClassLoader->loadClass() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2901
+[28-Sep-2016 16:45:11 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/VideoController.php on line 169
+[28-Sep-2016 16:45:11 UTC] PHP Stack trace:
+[28-Sep-2016 16:45:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[28-Sep-2016 16:45:11 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[28-Sep-2016 16:45:11 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[28-Sep-2016 16:45:11 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[28-Sep-2016 16:45:11 UTC] PHP   5. Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:124
+[28-Sep-2016 16:45:11 UTC] PHP   6. Symfony\Component\EventDispatcher\EventDispatcher->dispatch() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php:136
+[28-Sep-2016 16:45:11 UTC] PHP   7. Symfony\Component\EventDispatcher\EventDispatcher->doDispatch() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2058
+[28-Sep-2016 16:45:11 UTC] PHP   8. call_user_func:{/home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2143}() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2143
+[28-Sep-2016 16:45:11 UTC] PHP   9. Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2143
+[28-Sep-2016 16:45:11 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:61}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:61
+[28-Sep-2016 16:45:11 UTC] PHP  11. Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:61
+[28-Sep-2016 16:45:11 UTC] PHP  12. Symfony\Component\Routing\Router->matchRequest() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2340
+[28-Sep-2016 16:45:11 UTC] PHP  13. Symfony\Component\Routing\Router->getMatcher() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:1608
+[28-Sep-2016 16:45:11 UTC] PHP  14. Symfony\Component\Config\ResourceCheckerConfigCacheFactory->cache() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:1640
+[28-Sep-2016 16:45:11 UTC] PHP  15. call_user_func:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/ResourceCheckerConfigCacheFactory.php:46}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/ResourceCheckerConfigCacheFactory.php:46
+[28-Sep-2016 16:45:11 UTC] PHP  16. Symfony\Component\Routing\Router->Symfony\Component\Routing\{closure}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/ResourceCheckerConfigCacheFactory.php:46
+[28-Sep-2016 16:45:11 UTC] PHP  17. Symfony\Component\Routing\Router->getMatcherDumperInstance() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:1630
+[28-Sep-2016 16:45:11 UTC] PHP  18. Symfony\Bundle\FrameworkBundle\Routing\Router->getRouteCollection() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:1678
+[28-Sep-2016 16:45:11 UTC] PHP  19. Symfony\Bundle\FrameworkBundle\Routing\DelegatingLoader->load() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:1897
+[28-Sep-2016 16:45:11 UTC] PHP  20. Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser->parse() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Routing/DelegatingLoader.php:80
+[28-Sep-2016 16:45:11 UTC] PHP  21. class_exists() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2901
+[28-Sep-2016 16:45:11 UTC] PHP  22. spl_autoload_call() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2901
+[28-Sep-2016 16:45:11 UTC] PHP  23. Symfony\Component\Debug\DebugClassLoader->loadClass() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2901
+[28-Sep-2016 16:45:24 UTC] PHP Fatal error:  Call to undefined method AppBundle\Controller\VideoController::getRepository() in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/VideoController.php on line 128
+[28-Sep-2016 16:45:24 UTC] PHP Stack trace:
+[28-Sep-2016 16:45:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[28-Sep-2016 16:45:24 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[28-Sep-2016 16:45:24 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[28-Sep-2016 16:45:24 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[28-Sep-2016 16:45:24 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 16:45:24 UTC] PHP   6. AppBundle\Controller\VideoController->editAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 16:46:23 UTC] PHP Fatal error:  Call to undefined method AppBundle\Controller\VideoController::getRepository() in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/VideoController.php on line 128
+[28-Sep-2016 16:46:23 UTC] PHP Stack trace:
+[28-Sep-2016 16:46:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[28-Sep-2016 16:46:23 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[28-Sep-2016 16:46:23 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[28-Sep-2016 16:46:23 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[28-Sep-2016 16:46:23 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 16:46:23 UTC] PHP   6. AppBundle\Controller\VideoController->editAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 16:57:58 UTC] PHP Fatal error:  Call to undefined method AppBundle\Controller\VideoController::getRepository() in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/VideoController.php on line 128
+[28-Sep-2016 16:57:58 UTC] PHP Stack trace:
+[28-Sep-2016 16:57:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[28-Sep-2016 16:57:58 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[28-Sep-2016 16:57:58 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[28-Sep-2016 16:57:58 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[28-Sep-2016 16:57:58 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 16:57:58 UTC] PHP   6. AppBundle\Controller\VideoController->editAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 17:00:20 UTC] PHP Fatal error:  Call to undefined method AppBundle\Controller\VideoController::getRepository() in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/VideoController.php on line 128
+[28-Sep-2016 17:00:20 UTC] PHP Stack trace:
+[28-Sep-2016 17:00:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[28-Sep-2016 17:00:20 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[28-Sep-2016 17:00:20 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[28-Sep-2016 17:00:20 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[28-Sep-2016 17:00:20 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 17:00:20 UTC] PHP   6. AppBundle\Controller\VideoController->editAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 17:01:23 UTC] PHP Fatal error:  Call to a member function getUser() on a non-object in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/VideoController.php on line 134
+[28-Sep-2016 17:01:23 UTC] PHP Stack trace:
+[28-Sep-2016 17:01:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[28-Sep-2016 17:01:23 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[28-Sep-2016 17:01:23 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[28-Sep-2016 17:01:23 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[28-Sep-2016 17:01:23 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 17:01:23 UTC] PHP   6. AppBundle\Controller\VideoController->editAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 17:02:04 UTC] PHP Fatal error:  Call to a member function getUser() on a non-object in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/VideoController.php on line 134
+[28-Sep-2016 17:02:04 UTC] PHP Stack trace:
+[28-Sep-2016 17:02:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[28-Sep-2016 17:02:04 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[28-Sep-2016 17:02:04 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[28-Sep-2016 17:02:04 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[28-Sep-2016 17:02:04 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 17:02:04 UTC] PHP   6. AppBundle\Controller\VideoController->editAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 17:03:45 UTC] PHP Fatal error:  Call to a member function getUser() on a non-object in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/VideoController.php on line 135
+[28-Sep-2016 17:03:45 UTC] PHP Stack trace:
+[28-Sep-2016 17:03:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[28-Sep-2016 17:03:45 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[28-Sep-2016 17:03:45 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[28-Sep-2016 17:03:45 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[28-Sep-2016 17:03:45 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 17:03:45 UTC] PHP   6. AppBundle\Controller\VideoController->editAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 17:04:39 UTC] PHP Fatal error:  Call to a member function getUser() on a non-object in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/VideoController.php on line 135
+[28-Sep-2016 17:04:39 UTC] PHP Stack trace:
+[28-Sep-2016 17:04:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[28-Sep-2016 17:04:39 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[28-Sep-2016 17:04:39 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[28-Sep-2016 17:04:39 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[28-Sep-2016 17:04:39 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 17:04:39 UTC] PHP   6. AppBundle\Controller\VideoController->editAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 17:05:37 UTC] PHP Fatal error:  Call to a member function getUser() on a non-object in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/VideoController.php on line 135
+[28-Sep-2016 17:05:37 UTC] PHP Stack trace:
+[28-Sep-2016 17:05:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[28-Sep-2016 17:05:37 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[28-Sep-2016 17:05:37 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[28-Sep-2016 17:05:37 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[28-Sep-2016 17:05:37 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 17:05:37 UTC] PHP   6. AppBundle\Controller\VideoController->editAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 17:06:18 UTC] PHP Fatal error:  Call to a member function getUser() on a non-object in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/VideoController.php on line 135
+[28-Sep-2016 17:06:18 UTC] PHP Stack trace:
+[28-Sep-2016 17:06:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[28-Sep-2016 17:06:18 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[28-Sep-2016 17:06:18 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[28-Sep-2016 17:06:18 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[28-Sep-2016 17:06:18 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[28-Sep-2016 17:06:18 UTC] PHP   6. AppBundle\Controller\VideoController->editAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
