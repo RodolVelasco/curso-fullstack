@@ -8,8 +8,13 @@ video_edit:
     defaults:   { _controller: "AppBundle:Video:edit", id:null}
     methods:    POST
     
-#video_upload_image:
-#    path:       /upload-image-video
-#    defaults:   { _controller: "AppBundle:Video:uploadImage"}
-#    methods:    POST
+video_upload_image:
+    path:       /upload-image/{id}
+    defaults:   { _controller: "AppBundle:Video:upload", id:null}
+    methods:    POST
+    
+video_upload_video:
+    path:       /upload-video/{id}
+    defaults:   { _controller: "AppBundle:Video:upload", id:null}
+    methods:    POST
     

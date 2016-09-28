@@ -179,4 +179,103 @@ class VideoController extends Controller
         
         return $helpers->json($data);
     }
+    
+    public function uploadAction(Request $request, $id)
+    {
+        $helpers = $this->get("app.helpers");
+        
+        $hash = $request->get("authorization", null);
+        $authCheck = $helpers->authCheck($hash);
+        
+        if($authCheck == true)
+        {
+            
+            $identity = $helpers->authCheck($hash, true);
+            
+            $em = $this->getDoctrine()->getManager();
+            $video = $em->getRepository("BackendBundle:Video")->findOneBy(
+                        array(
+                            "id" => $id
+                        )
+                     );
+            
+            if($id != null && isset($identity->sub) && $identity->sub == $video->getUser()->getId())
+            {
+                $file = $request->files->get('image', null);
+                $file_video = $request->files->get('video', null);
+                
+                //if(is_object($file_video)){echo "hola ".count($video); die();}
+                
+                if($file != null && !empty($file))
+                {
+                    
+                    $ext = $file->guessExtension();
+                    
+                    if($ext == "jpeg" || $ext == "jpg" || $ext == "png"){
+                        $file_name = time().".".$ext;
+                        $path_of_file = "uploads/video_images/video_".$id;
+                        $file->move($path_of_file, $file_name);
+                        
+                        $video->setImage($file_name);
+                        $em->persist($video);
+                        $em->flush();
+                        
+                        $data = array(
+                            "status"    => "success",
+                            "code"      => 200,
+                            "data"      => "Image file for video, uploaded."
+                        );
+                    }else{
+                            $data = array(
+                                "status"    => "error",
+                                "code"      => 200,
+                                "data"      => "Image format for video not valid"
+                            );
+                        }
+                }else{
+                    if($file_video != null && !empty($file_video))
+                    {
+                        $ext = $file_video->guessExtension();
+                        
+                        if($ext == "mp4" || $ext == "avi"){
+                            $file_name = time().".".$ext;
+                            $path_of_file = "uploads/video_files/video_".$id;
+                            $file_video->move($path_of_file, $file_name);
+                            
+                            $video->setVideoPath($file_name);
+                            $em->persist($video);
+                            $em->flush();
+                            
+                            $data = array(
+                                "status"    => "success",
+                                "code"      => 200,
+                                "data"      => "Video file uploaded"
+                            );
+                        }else{
+                            $data = array(
+                                "status"    => "error",
+                                "code"      => 200,
+                                "data"      => "Video format not valid"
+                            );
+                        }
+                    }
+                }
+                
+            }else{
+                $data = array(
+                    "status"    => "error",
+                    "code"      => 400,
+                    "data"      => "Video updated error, you are not the owner"
+                );
+            }
+        }else{
+            $data = array(
+                        "status"    => "error",
+                        "code"      => 400,
+                        "msg"       => "Authorization not valid"
+                    );
+        }
+        
+        return $helpers->json($data);
+    }
 }
