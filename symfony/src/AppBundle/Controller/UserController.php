@@ -179,9 +179,15 @@ class UserController extends Controller
                 $data = array(
                             "status"    => "error",
                             "code"      => 400,
-                            "msg"       => "Authorization not valid"
+                            "msg"       => "Authorization not valid, param failed"
                         );
             }
+        }else{
+            $data = array(
+                            "status"    => "error",
+                            "code"      => 400,
+                            "msg"       => "Authorization not valid"
+                        );
         }
         
         return $helpers->json($data);
