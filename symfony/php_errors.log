@@ -3778,3 +3778,28 @@
 [29-Sep-2016 18:04:48 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
 [29-Sep-2016 18:04:48 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
 [29-Sep-2016 18:04:48 UTC] PHP   6. AppBundle\Controller\CommentController->newAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[29-Sep-2016 19:40:18 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/CommentController.php on line 140
+[29-Sep-2016 19:40:18 UTC] PHP Stack trace:
+[29-Sep-2016 19:40:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[29-Sep-2016 19:40:18 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[29-Sep-2016 19:40:18 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[29-Sep-2016 19:40:18 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[29-Sep-2016 19:40:18 UTC] PHP   5. Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:124
+[29-Sep-2016 19:40:18 UTC] PHP   6. Symfony\Component\EventDispatcher\EventDispatcher->dispatch() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php:136
+[29-Sep-2016 19:40:18 UTC] PHP   7. Symfony\Component\EventDispatcher\EventDispatcher->doDispatch() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2058
+[29-Sep-2016 19:40:18 UTC] PHP   8. call_user_func:{/home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2143}() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2143
+[29-Sep-2016 19:40:18 UTC] PHP   9. Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2143
+[29-Sep-2016 19:40:18 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:61}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:61
+[29-Sep-2016 19:40:18 UTC] PHP  11. Symfony\Component\HttpKernel\EventListener\RouterListener->onKernelRequest() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:61
+[29-Sep-2016 19:40:18 UTC] PHP  12. Symfony\Component\Routing\Router->matchRequest() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2340
+[29-Sep-2016 19:40:18 UTC] PHP  13. Symfony\Component\Routing\Router->getMatcher() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:1608
+[29-Sep-2016 19:40:18 UTC] PHP  14. Symfony\Component\Config\ResourceCheckerConfigCacheFactory->cache() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:1640
+[29-Sep-2016 19:40:18 UTC] PHP  15. call_user_func:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/ResourceCheckerConfigCacheFactory.php:46}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/ResourceCheckerConfigCacheFactory.php:46
+[29-Sep-2016 19:40:18 UTC] PHP  16. Symfony\Component\Routing\Router->Symfony\Component\Routing\{closure}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/ResourceCheckerConfigCacheFactory.php:46
+[29-Sep-2016 19:40:18 UTC] PHP  17. Symfony\Component\Routing\Router->getMatcherDumperInstance() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:1630
+[29-Sep-2016 19:40:18 UTC] PHP  18. Symfony\Bundle\FrameworkBundle\Routing\Router->getRouteCollection() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:1678
+[29-Sep-2016 19:40:18 UTC] PHP  19. Symfony\Bundle\FrameworkBundle\Routing\DelegatingLoader->load() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:1897
+[29-Sep-2016 19:40:18 UTC] PHP  20. Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser->parse() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Routing/DelegatingLoader.php:80
+[29-Sep-2016 19:40:18 UTC] PHP  21. class_exists() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2901
+[29-Sep-2016 19:40:18 UTC] PHP  22. spl_autoload_call() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2901
+[29-Sep-2016 19:40:18 UTC] PHP  23. Symfony\Component\Debug\DebugClassLoader->loadClass() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2901

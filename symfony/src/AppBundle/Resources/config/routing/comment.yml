@@ -3,3 +3,8 @@ comment_new:
     defaults:   { _controller: "AppBundle:Comment:new"}
     methods:    POST
     
+comment_delete:
+    path:       /delete/{comment_id}
+    defaults:   { _controller: "AppBundle:Comment:delete", comment_id:null}
+    methods:    POST
+    
