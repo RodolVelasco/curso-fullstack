@@ -18,6 +18,17 @@ use Symfony\Component\Debug\Debug;
     exit('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
 }*/
 
+// Configuracion Angular JS
+// cualquiera puede hacer peticiones HTTP desde cualquier origen
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+header("Allow: GET, POST, OPTIONS, PUT, DELETE");
+$method = $_SERVER["REQUEST_METHOD"];
+if($method == $OPTIONS){
+    die();
+}
+
 /**
  * @var Composer\Autoload\ClassLoader $loader
  */
