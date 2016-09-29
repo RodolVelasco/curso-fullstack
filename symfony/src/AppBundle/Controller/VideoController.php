@@ -353,17 +353,16 @@ class VideoController extends Controller
         
         $em = $this->getDoctrine()->getManager();
         
-        if($search != null)
-        {
+        if($search != null){
             $dql = "SELECT v FROM BackendBundle:Video v "
-                   ."WHERE v.title LIKE '%$search%' OR " 
-                   ."v.description LIKE '%$search%' ORDER BY v.id DESC";
+                    . "WHERE v.title LIKE :search OR "
+                    . "v.description LIKE :search ORDER BY v.id DESC";
+            $query = $em->createQuery($dql)
+                    ->setParameter("search", "%$search%");
         }else{
             $dql = "SELECT v FROM BackendBundle:Video v ORDER BY v.id DESC";
+            $query = $em->createQuery($dql);
         }
-        
-        
-        $query = $em->createQuery($dql);
         
         $page = $request->query->getInt("page", 1);
         $paginator = $this->get("knp_paginator");
@@ -383,4 +382,5 @@ class VideoController extends Controller
         
         return $helpers->json($data);
     }
+    
 }

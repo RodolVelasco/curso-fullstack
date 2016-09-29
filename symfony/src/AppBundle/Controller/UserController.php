@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use BackendBundle\Entity\Video;
 use BackendBundle\Entity\User;
 
 class UserController extends Controller
@@ -255,5 +256,64 @@ class UserController extends Controller
         }
         
         return $helpers->json($data);
+    }
+    
+    public function channelAction(Request $request, User $user_id = null)
+    {
+        
+        $user = $user_id;
+        
+        $helpers = $this->get("app.helpers");
+        
+        $em = $this->getDoctrine()->getManager();
+        
+        //$videos = $em->getRepository("BackendBundle:Video")->findByUser($user);
+        //echo "Número de videos ".count($videos); die();
+        
+        $dql = "SELECT v FROM BackendBundle:Video v WHERE v.user = :id ORDER BY v.id DESC";
+        $query = $em->createQuery($dql)
+                    ->setParameter("id", $user->getId());
+        //echo "Número de videos ".count($query->getResult()); die();
+        
+        /*$videos = $em->getRepository("BackendBundle:Video")->findBy(
+                    array("user" => $user),
+                    array("id" => "DESC")
+                  );*/
+        //echo "Número de videos ".count($videos); die();
+        
+        $page = $request->query->getInt("page", 1);
+        $paginator = $this->get("knp_paginator");
+        $items_per_page = 10;
+        
+        $pagination = $paginator->paginate($query, $page, $items_per_page);
+        //$pagination = $paginator->paginate($videos, $page, $items_per_page);
+        $total_items_count = $pagination->getTotalItemCount();
+        
+        if(count($user) == 1)
+        {
+            $data = array(
+                        "status"            => "success",
+                        "total_items_count" => $total_items_count,
+                        "page_actual"       => $page,
+                        "items_per_page"    => $items_per_page,
+                        "total_pages"       => ceil($total_items_count / $items_per_page)
+                    );
+                    
+            $data["data"]["videos"] = $pagination;
+            $data["data"]["user"]   = $user;
+        }else{
+            $data = array(
+                        "status" => "error",
+                        "code"   => 400,
+                        "msg"    => "User not exits"
+                    );
+        }
+        //echo "Channel"; die();
+        return $helpers->json($data);
+    }
+    
+    public function testAction()
+    {
+        echo "HOLA JOSE MANUEL, SOY TU PADRE"; die();
     }
 }
