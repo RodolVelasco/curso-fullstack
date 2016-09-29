@@ -8,3 +8,8 @@ comment_delete:
     defaults:   { _controller: "AppBundle:Comment:delete", comment_id:null}
     methods:    POST
     
+comment_list:
+    path:       /list/{video_id}
+    defaults:   { _controller: "AppBundle:Comment:list", video_id:null}
+    methods:    GET
+    

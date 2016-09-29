@@ -132,4 +132,39 @@ class CommentController extends Controller
         
         return $helpers->json($data);
     }
+    
+    public function listAction(Request $request, Video $video_id = null)
+    {
+        $helpers = $this->get("app.helpers");
+        $video = $video_id;
+        if(count($video) == 1)
+        {
+            $em = $this->getDoctrine()->getManager();
+            $comments = $em->getRepository("BackendBundle:Comment")->findBy(
+                            array("video" => $video),
+                            array("id" => "DESC")
+                        );
+            if(count($comments)>0){
+                $data = array(
+                            "status"    => "success",
+                            "code"      => 200,
+                            "data"      => $comments
+                        );
+            }else{
+                $data = array(
+                        "status"    => "error",
+                        "code"      => 400,
+                        "msg"       => "There are no comments for this video"
+                    );
+            }
+        }else{
+            $data = array(
+                        "status"    => "error",
+                        "code"      => 400,
+                        "msg"       => "Video not exists"
+                    );
+        }
+        
+        return $helpers->json($data);
+    }
 }

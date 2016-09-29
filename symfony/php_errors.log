@@ -3803,3 +3803,19 @@
 [29-Sep-2016 19:40:18 UTC] PHP  21. class_exists() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2901
 [29-Sep-2016 19:40:18 UTC] PHP  22. spl_autoload_call() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2901
 [29-Sep-2016 19:40:18 UTC] PHP  23. Symfony\Component\Debug\DebugClassLoader->loadClass() /home/ubuntu/workspace/curso-fullstack/symfony/var/cache/dev/classes.php:2901
+[29-Sep-2016 20:57:10 UTC] PHP Fatal error:  Call to undefined method Doctrine\ORM\EntityManager::getRepositoty() in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/CommentController.php on line 143
+[29-Sep-2016 20:57:10 UTC] PHP Stack trace:
+[29-Sep-2016 20:57:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[29-Sep-2016 20:57:10 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[29-Sep-2016 20:57:10 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[29-Sep-2016 20:57:10 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[29-Sep-2016 20:57:10 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[29-Sep-2016 20:57:10 UTC] PHP   6. AppBundle\Controller\CommentController->listAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[29-Sep-2016 20:57:48 UTC] PHP Fatal error:  Call to undefined method Doctrine\ORM\EntityManager::getRepositoty() in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/CommentController.php on line 143
+[29-Sep-2016 20:57:48 UTC] PHP Stack trace:
+[29-Sep-2016 20:57:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[29-Sep-2016 20:57:48 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[29-Sep-2016 20:57:48 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[29-Sep-2016 20:57:48 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[29-Sep-2016 20:57:48 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[29-Sep-2016 20:57:48 UTC] PHP   6. AppBundle\Controller\CommentController->listAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
