@@ -3754,3 +3754,27 @@
 [29-Sep-2016 16:39:04 UTC] PHP 254. Symfony\Component\Serializer\Serializer->getNormalizer() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/Serializer/Serializer.php:141
 [29-Sep-2016 16:39:04 UTC] PHP 255. Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer->supportsNormalization() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/Serializer/Serializer.php:204
 [29-Sep-2016 16:39:04 UTC] PHP 256. Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer->supportsNormalization() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/Serializer/Normalizer/GetSetMethodNormalizer.php:78
+[29-Sep-2016 18:00:52 UTC] PHP Fatal error:  Call to undefined function AppBundle\Controller\json_decoded() in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/CommentController.php on line 30
+[29-Sep-2016 18:00:52 UTC] PHP Stack trace:
+[29-Sep-2016 18:00:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[29-Sep-2016 18:00:52 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[29-Sep-2016 18:00:52 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[29-Sep-2016 18:00:52 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[29-Sep-2016 18:00:52 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[29-Sep-2016 18:00:52 UTC] PHP   6. AppBundle\Controller\CommentController->newAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[29-Sep-2016 18:04:16 UTC] PHP Fatal error:  Call to undefined function AppBundle\Controller\json_decoded() in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/CommentController.php on line 30
+[29-Sep-2016 18:04:16 UTC] PHP Stack trace:
+[29-Sep-2016 18:04:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[29-Sep-2016 18:04:16 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[29-Sep-2016 18:04:16 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[29-Sep-2016 18:04:16 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[29-Sep-2016 18:04:16 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[29-Sep-2016 18:04:16 UTC] PHP   6. AppBundle\Controller\CommentController->newAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[29-Sep-2016 18:04:48 UTC] PHP Fatal error:  Call to undefined function AppBundle\Controller\json_decoded() in /home/ubuntu/workspace/curso-fullstack/symfony/src/AppBundle/Controller/CommentController.php on line 30
+[29-Sep-2016 18:04:48 UTC] PHP Stack trace:
+[29-Sep-2016 18:04:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:0
+[29-Sep-2016 18:04:48 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/web/app_dev.php:30
+[29-Sep-2016 18:04:48 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[29-Sep-2016 18:04:48 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:66
+[29-Sep-2016 18:04:48 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148}() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
+[29-Sep-2016 18:04:48 UTC] PHP   6. AppBundle\Controller\CommentController->newAction() /home/ubuntu/workspace/curso-fullstack/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:148
