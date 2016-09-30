@@ -5,7 +5,7 @@ import { ROUTER_DIRECTIVES, Router, ActivatedRoute } from "@angular/router";
 // Decorador component, indicamos en que etiqueta se va a cargar la 
 @Component({
     selector: 'my-app',
-    template: `<h1>Hola mundo con Angular 2 !! victorroblesweb.es</h1>
+    template: `<h1>Hola mundo con Angular 2 !! victorroblesweb.es</h1><hr/>
                <router-outlet></router-outlet>
     `,
     directives: [ROUTER_DIRECTIVES]

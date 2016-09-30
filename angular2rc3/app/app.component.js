@@ -18,7 +18,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<h1>Hola mundo con Angular 2 !! victorroblesweb.es</h1>\n               <router-outlet></router-outlet>\n    ",
+            template: "<h1>Hola mundo con Angular 2 !! victorroblesweb.es</h1><hr/>\n               <router-outlet></router-outlet>\n    ",
             directives: [router_1.ROUTER_DIRECTIVES]
         }), 
         __metadata('design:paramtypes', [])
