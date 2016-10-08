@@ -14,10 +14,20 @@ var LoginComponent = (function () {
     function LoginComponent() {
         this.titulo = "Identificate";
     }
+    LoginComponent.prototype.ngOnInit = function () {
+        this.user = {
+            "email": "",
+            "password": "",
+            "getHash": "false"
+        };
+    };
+    LoginComponent.prototype.onSubmit = function () {
+        console.log(this.user);
+    };
     LoginComponent = __decorate([
         core_1.Component({
             selector: 'login',
-            templateUrl: 'app/view/login.html',
+            templateUrl: 'app/view/login.html'
         }), 
         __metadata('design:paramtypes', [])
     ], LoginComponent);
