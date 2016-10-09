@@ -9,27 +9,41 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var login_service_1 = require('../services/login.service');
 // Decorador component, indicamos en que etiqueta se va a cargar la plantilla
 var LoginComponent = (function () {
-    function LoginComponent() {
+    function LoginComponent(_loginService) {
+        this._loginService = _loginService;
         this.titulo = "Identificate";
     }
     LoginComponent.prototype.ngOnInit = function () {
         this.user = {
             "email": "",
             "password": "",
-            "getHash": "false"
+            "gethash": "false"
         };
     };
     LoginComponent.prototype.onSubmit = function () {
+        var _this = this;
         console.log(this.user);
+        this._loginService.signup(this.user).subscribe(function (response) {
+            //alert(response);
+            console.log(response);
+        }, function (error) {
+            _this.errorMessage = error;
+            if (_this.errorMessage != null) {
+                console.log(_this.errorMessage);
+                alert("Error en la petición");
+            }
+        });
     };
     LoginComponent = __decorate([
         core_1.Component({
             selector: 'login',
-            templateUrl: 'app/view/login.html'
+            templateUrl: 'app/view/login.html',
+            providers: [login_service_1.LoginService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [login_service_1.LoginService])
     ], LoginComponent);
     return LoginComponent;
 }());
